@@ -1,0 +1,69 @@
+/* styles.css */
+
+/* Basic Reset */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: auto; /* Allows scrolling if content exceeds viewport height */
+}
+
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for months */
+    grid-template-rows: repeat(4, auto); /* 4 rows for months */
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    box-sizing: border-box;
+}
+
+.calendar {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.calendar-header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 40px;
+    gap: 1px;
+}
+
+.calendar-day, .calendar-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    height: 100%;
+}
+
+.calendar-day {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendar-date {
+    background-color: #fff;
+}
